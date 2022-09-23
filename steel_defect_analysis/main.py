@@ -17,9 +17,9 @@ from process import get_images
 from plot import plot_images
 
 if __name__ == "__main__":
-    
+
     # set path to a data dir
-    data_dir = 'data'
+    data_dir = "data"
 
     # extract images
     class_names = sorted([x for x in os.listdir(data_dir)])
@@ -28,8 +28,8 @@ if __name__ == "__main__":
     total_im_num = sum([len(x) for x in image_files])
 
     for name, files in zip(class_names, image_files):
-        print(f'Class {name} contains {len(files)} images')
+        print(f"Class {name} contains {len(files)} images")
 
-    print(f'Total number of images is {total_im_num}')
+    print(f"Total number of images is {total_im_num}")
 
     plot_images(image_files, class_names)
